@@ -9,6 +9,7 @@ import { useDemoState } from '@/hooks/useDemoState';
 import { LoginPrompt } from '@/components/auth/LoginPrompt';
 import { ControlledInput } from '@/components/chat/ControlledInput';
 import { useAuth } from '@/contexts/AuthContext';
+import { analytics } from '@/lib/analytics';
 
 interface Message {
   id: string;
@@ -91,6 +92,9 @@ export const ChatInterface = () => {
     setInput('');
     setIsLoading(true);
     
+    // 跟踪AI生成事件
+    analytics.trackHookGeneration(input, true);
+    
     try {
       const aiResponse = await generateHook(input);
       const aiMessage: Message = {
@@ -104,8 +108,15 @@ export const ChatInterface = () => {
       
       // 标记为已生成
       markAsGenerated();
+      
+      // 跟踪演示完成
+      if (generationCount >= 0) {
+        analytics.trackDemoComplete(generationCount + 1);
+      }
     } catch (error) {
       console.error('生成失败:', error);
+      analytics.trackHookGeneration(input, false);
+      analytics.trackError('hook_generation_failed', 'ChatInterface');
     } finally {
       setIsLoading(false);
     }
