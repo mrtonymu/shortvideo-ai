@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ModernButton } from '@/components/ui/ModernButton';
-import { GradientBackground } from '@/components/ui/GradientBackground';
+// import { GradientBackground } from '@/components/ui/GradientBackground';
 
 export const HeroSection = () => {
   return (

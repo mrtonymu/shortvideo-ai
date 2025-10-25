@@ -21,8 +21,16 @@ export const useDemoState = () => {
     // 检查本地存储的演示状态
     const savedState = localStorage.getItem('herohook_demo_state');
     if (savedState) {
-      const parsed = JSON.parse(savedState);
-      setDemoState(parsed);
+      try {
+        const parsed = JSON.parse(savedState);
+        // 使用setTimeout避免同步setState
+        setTimeout(() => {
+          setDemoState(parsed);
+        }, 0);
+      } catch (error) {
+        console.error('Failed to parse saved demo state:', error);
+        localStorage.removeItem('herohook_demo_state');
+      }
     }
   }, []);
 

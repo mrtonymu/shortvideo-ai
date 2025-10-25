@@ -2,7 +2,7 @@ import { HeroSection } from '@/components/sections/HeroSection';
 import { ProblemSection } from '@/components/sections/ProblemSection';
 import { SolutionSection } from '@/components/sections/SolutionSection';
 import { PricingSection } from '@/components/sections/PricingSection';
-import { ChatInterface } from '@/components/chat/ChatInterface';
+// import { ChatInterface } from '@/components/chat/ChatInterface';
 import { BubbleChat } from '@/components/chat/BubbleChat';
 
 export default function Home() {

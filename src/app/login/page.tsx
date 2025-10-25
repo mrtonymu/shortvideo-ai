@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
-import { ModernButton } from '@/components/ui/ModernButton';
-import { ModernCard } from '@/components/ui/ModernCard';
-import { GradientBackground } from '@/components/ui/GradientBackground';
-import { ModernLoader } from '@/components/ui/ModernLoader';
+// import { ModernButton } from '@/components/ui/ModernButton';
+// import { ModernCard } from '@/components/ui/ModernCard';
+// import { GradientBackground } from '@/components/ui/GradientBackground';
+// import { ModernLoader } from '@/components/ui/ModernLoader';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -31,7 +31,7 @@ export default function LoginPage() {
       } else {
         setError('登录失败，请检查邮箱和密码');
       }
-    } catch (error) {
+    } catch {
       setError('登录时发生错误，请重试');
     } finally {
       setIsLoading(false);

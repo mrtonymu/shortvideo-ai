@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
-import { ModernButton } from '@/components/ui/ModernButton';
-import { ModernCard } from '@/components/ui/ModernCard';
-import { GradientBackground } from '@/components/ui/GradientBackground';
-import { ModernLoader } from '@/components/ui/ModernLoader';
+// import { ModernButton } from '@/components/ui/ModernButton';
+// import { ModernCard } from '@/components/ui/ModernCard';
+// import { GradientBackground } from '@/components/ui/GradientBackground';
+// import { ModernLoader } from '@/components/ui/ModernLoader';
 
 export default function RegisterPage() {
   const [formData, setFormData] = useState({
@@ -97,7 +97,7 @@ export default function RegisterPage() {
       } else {
         setError('注册失败，请重试');
       }
-    } catch (error) {
+    } catch {
       setError('注册时发生错误，请重试');
     } finally {
       setIsLoading(false);

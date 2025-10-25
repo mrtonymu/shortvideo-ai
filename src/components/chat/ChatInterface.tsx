@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ModernButton } from '@/components/ui/ModernButton';
-import { ModernCard } from '@/components/ui/ModernCard';
+// import { ModernButton } from '@/components/ui/ModernButton';
+// import { ModernCard } from '@/components/ui/ModernCard';
 import { ModernLoader } from '@/components/ui/ModernLoader';
 import { useDemoState } from '@/hooks/useDemoState';
 import { LoginPrompt } from '@/components/auth/LoginPrompt';
@@ -56,7 +56,6 @@ export const ChatInterface = () => {
   const { 
     hasGenerated, 
     isBlocked, 
-    isLoggedIn, 
     generationCount, 
     markAsGenerated 
   } = useDemoState();

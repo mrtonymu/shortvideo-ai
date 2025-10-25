@@ -40,7 +40,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require('daisyui')],
+  plugins: [require('daisyui')], // eslint-disable-line @typescript-eslint/no-require-imports
   daisyui: {
     themes: ['light'],
     base: true,
