@@ -1,8 +1,14 @@
 # 马哥AI Demo
 
-专为马来西亚内容创作者打造的AI助手Demo版本
+> 专为马来西亚内容创作者打造的AI助手Demo版本
 
-## 🎯 项目概述
+## 🚀 在线演示
+
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://mageai.vercel.app)
+
+**在线体验**: [https://mageai.vercel.app](https://mageai.vercel.app)
+
+## 📱 项目概述
 
 这是一个现代化的AI内容创作助手Demo，专门为马来西亚的视频创作者生成吸引人的开场钩子。项目展示了如何将GPTs转换为用户制SaaS系统，解决传统GPTs的共享问题。
 
@@ -28,11 +34,12 @@
 
 ## 🛠️ 技术栈
 
-- **前端**: Next.js 14 + TypeScript
+- **前端**: Next.js 16 + TypeScript
 - **样式**: Tailwind CSS + DaisyUI
 - **动画**: Framer Motion
 - **字体**: Inter (Google Fonts)
 - **图标**: Lucide React
+- **部署**: Vercel
 
 ## 🚀 快速开始
 
@@ -49,7 +56,27 @@ npm run dev
 ### 访问应用
 打开 [http://localhost:3000](http://localhost:3000) 查看效果
 
-## 📱 功能演示
+## 📊 项目结构
+
+```
+src/
+├── app/
+│   ├── layout.tsx          # 根布局
+│   ├── page.tsx            # 主页面
+│   ├── login/              # 登录页面
+│   ├── register/           # 注册页面
+│   └── dashboard/          # 用户面板
+├── components/
+│   ├── ui/                 # 基础UI组件
+│   ├── sections/           # 页面区块
+│   ├── chat/               # 聊天功能
+│   ├── auth/               # 认证组件
+│   └── layout/             # 布局组件
+├── contexts/               # React Context
+└── hooks/                  # 自定义Hooks
+```
+
+## 🎯 功能演示
 
 ### 1. Hero区域
 - 震撼的渐变背景
@@ -108,59 +135,16 @@ AI成本: RM100/月
 - **背景**: 动态渐变背景
 - **文字**: 白色/深色对比
 
-## 📊 项目结构
-
-```
-src/
-├── app/
-│   ├── layout.tsx          # 根布局
-│   ├── page.tsx            # 主页面
-│   └── globals.css         # 全局样式
-├── components/
-│   ├── ui/                 # 基础UI组件
-│   │   ├── ModernButton.tsx
-│   │   ├── ModernCard.tsx
-│   │   ├── GradientBackground.tsx
-│   │   └── ModernLoader.tsx
-│   ├── sections/           # 页面区块
-│   │   ├── HeroSection.tsx
-│   │   ├── ProblemSection.tsx
-│   │   ├── SolutionSection.tsx
-│   │   └── PricingSection.tsx
-│   ├── chat/               # 聊天功能
-│   │   └── ChatInterface.tsx
-│   └── layout/             # 布局组件
-│       └── Navbar.tsx
-```
-
-## 🎯 下一步计划
-
-### 完整版本功能
-- [ ] 用户认证系统 (Supabase Auth)
-- [ ] 真实AI集成 (OpenAI API)
-- [ ] 支付系统 (Stripe)
-- [ ] 用户面板
-- [ ] 使用量追踪
-- [ ] 内容历史记录
-
-### 部署计划
-- [ ] Vercel部署
-- [ ] 域名配置
-- [ ] SSL证书
-- [ ] 性能优化
-
-## 💡 关键优势
-
-1. **解决共享问题**：个人账户，个人使用
-2. **持续收入**：订阅制，稳定现金流
-3. **可扩展**：用户增长，收入增长
-4. **技术可行**：基于现有技术栈
-5. **本地化**：专为马来西亚市场设计
-
 ## 📞 联系方式
 
-如有问题或建议，请联系开发团队。
+- **GitHub**: [mrtonymu](https://github.com/mrtonymu)
+- **Email**: timiemarketing@gmail.com
+- **项目地址**: [https://github.com/mrtonymu/shortvideo-ai](https://github.com/mrtonymu/shortvideo-ai)
+
+## 📄 许可证
+
+© 2025 马哥AI. All rights reserved.
 
 ---
 
-© 2025 马哥AI. All rights reserved.
+**专为马来西亚内容创作者打造的AI助手Demo版本**
