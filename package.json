@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf .next out",
+    "clean:all": "rm -rf .next out node_modules package-lock.json && npm install",
+    "preview": "next build && next start",
+    "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.76.1",
